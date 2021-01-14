@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Preloading Styles -->
+    <link rel="preload" href="slick/slick-theme.css" as="style">
+    <link rel="preload" href="slick/slick.css" as="style">
+    <link rel="preload" href="styles/main.css" as="style">
+    <!-- Preloading Scripts -->
+    <link rel="preload" href="scripts/jquery-3.5.1.js" as="script">
+    <link rel="preload" href="slick/slick.js" as="script">
+    <link rel="preload" href="scripts/main.js" as="script">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/516993e320.js" crossorigin="anonymous"></script>
+
+    <title>Home</title>
+</head>
+
+<body>
+    <!-- [if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com">upgrade your browser</a> to improve your experience and security.</p><![endif] -->
+
+    <!-- Preloader -->
+    <div id="hellopreloader">
+        <div id="hellopreloader_preload"></div>
+    </div>
+    <script type="text/javascript">
+        var hellopreloader = document.getElementById("hellopreloader_preload");
+
+        function fadeOutnojquery(el) {
+            el.style.opacity = 1;
+            var interhellopreloader = setInterval(function () {
+                el.style.opacity = el.style.opacity - 0.05;
+                if (el.style.opacity <= 0.05) {
+                    clearInterval(interhellopreloader);
+                    hellopreloader.style.display = "none";
+                }
+            }, 16);
+        }
+        window.onload = function () {
+            setTimeout(function () {
+                fadeOutnojquery(hellopreloader);
+            }, 500); // Время прелоадера 0.5s
+        };
+    </script>
+    <style>
+        #hellopreloader>p {
+            display: none;
+        }
+
+        #hellopreloader_preload {
+            display: block;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: #cccccc url("images/preloader_tail-spin.svg") center center no-repeat;
+            background-size: 48px;
+        }
+    </style>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-navbar">
+                <a class="navbar-logo" href="#">
+                    <img src="images/logo.svg" alt="Logo">
+                </a>
+                <div class="navbar-nav">
+                    <a class="nav-link active">Home</a>
+                    <a class="nav-link">About</a>
+                    <a class="nav-link">Portfolio</a>
+                    <a class="nav-link">Blog</a>
+                    <a class="nav-link">Contact</a>
+                    <a class="nav-link" id="search"><i class="fas fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Slider -->
+    <div class="slider-wrapper">
+        <div class="slider">
+            <div class="slide slide-02">
+                <div class="slide-text">
+                    <div class="text-title">
+                        <p>Design & Branding</p>
+                    </div>
+                    <p class="text-subtitle">We Deliver Quality Results</p>
+                </div>
+            </div>
+            <div class="slide slide-01">
+                <div class="slide-text">
+                    <div class="text-title">
+                        <p>Lian Creative Agency</p>
+                    </div>
+                    <p class="text-subtitle">Minimal Freelance Portfolio</p>
+                </div>
+            </div>
+            <div class="slide slide-02">
+                <div class="slide-text">
+                    <div class="text-title">
+                        <p>Design & Branding</p>
+                    </div>
+                    <p class="text-subtitle">We Deliver Quality Results</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-btns">
+            <img class="btn-prev" src="images/btn_arrow-left.svg">
+            <img class="btn-next" src="images/btn_arrow-right.svg">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="main-filters">
+                <a class="filter-link active">All</a>
+                <a class="filter-link">Logo</a>
+                <a class="filter-link">Mobile App</a>
+                <a class="filter-link">Wordpress</a>
+                <a class="filter-link">Web Design</a>
+                <a class="filter-link">UI/UX</a>
+                <a class="filter-link">Branding</a>
+            </div>
+            <section class="main-items row-01">
+                <div class="item">
+                    <div class="overlay"></div>
+                    <img src="images/main-01.jpg">
+                </div>
+                <div class="item">
+                    <div class="overlay"></div>
+                    <img src="images/main-02.jpg">
+                </div>
+                <div class="item">
+                    <div class="overlay"></div>
+                    <img src="images/main-03.jpg">
+                </div>
+            </section>
+            <section class="main-items row-02">
+                <div class="item">
+                    <div class="overlay"></div>
+                    <img src="images/main-04.jpg">
+                </div>
+                <div class="item">
+                    <div class="overlay"></div>
+                    <img src="images/main-05.jpg">
+                </div>
+                <div class="item">
+                    <div class="overlay"></div>
+                    <img src="images/main-06.jpg">
+                </div>
+            </section>
+            <section class="main-items row-03">
+                <div class="item">
+                    <div class="overlay"></div>
+                    <img src="images/main-07.jpg">
+                </div>
+                <div class="item">
+                    <div class="sub-item">
+                        <div class="overlay"></div>
+                        <img src="images/main-08_1.jpg">
+                    </div>
+                    <div class="sub-item">
+                        <div class="overlay"></div>
+                        <img src="images/main-08_2.jpg">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="overlay"></div>
+                    <img src="images/main-09.jpg">
+                </div>
+            </section>
+            <div class="btn">
+                <a class="btn_load-more" href="#">Load More</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <a class="footer-logo" href="#">
+            <img src="images/logo.svg" alt="Logo">
+        </a>
+        <div class="footer-socials">
+            <a class="social-link">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="social-link">
+                <i class="fab fa-google-plus-g"></i>
+            </a>
+            <a class="social-link">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a class="social-link">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="social-link">
+                <i class="fab fa-dribbble"></i>
+            </a>
+            <a class="social-link">
+                <i class="fab fa-pinterest-p"></i>
+            </a>
+            <a class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p class="footer-copyright">
+            © 2016 <span>Mulitix Theme</span> by ThemeForces. All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- "Back to Top" Button -->
+    <a id="back-to-top">
+        <img src="images/btn_arrow-top.svg" alt="кнопка наверх">
+    </a>
+
+    <!-- Scripts -->
+    <script src="scripts/jquery-3.5.1.js"></script>
+    <script src="slick/slick.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
